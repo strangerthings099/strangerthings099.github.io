@@ -259,3 +259,11 @@ footer{
     transform: translateX(-100%);
   }
 }
+
+
+@media (max-width: 1500px) {
+    .card{
+        
+    }
+}
+
