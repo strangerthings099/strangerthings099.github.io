@@ -19,6 +19,13 @@ button{
     font-family: "poppins", sans-serif;
 }
 
+.bgMonstro{
+    background-image: url(imagens/bg-sec2.webp);
+    background-position: center;
+    background-size: cover;
+    
+}
+
 header{
     width: 100%;
     display: flex;
@@ -28,13 +35,39 @@ header{
     z-index: 9;
 }
 
+section{
+    width: 100%;
+    display: flex;
+    padding: 7vw;
+}
+
+h2{
+    font-size: 40px;
+    font-weight: 500;
+}
+
+ul{
+    list-style: none;
+}
+
+button{ 
+            background-color: transparent;
+            color: white;
+            font-size: 16px;
+            display: flex;
+            gap: 12px;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid white;
+            padding: 16px 0px;
+            cursor: pointer;
+     }
+
 .hero{
      background-image: url("imagens/hero.webp");
      background-position: 50% 0%;
      background-size: cover;
-     width: 100%;
      height: 100vh;
-     display: flex;
      align-items: center;
      justify-content: space-between;
      padding: 0 7vw 7vw 7vw;
@@ -66,18 +99,115 @@ header{
             text-align: end;
         }
 
-        button{ 
-            background-color: transparent;
-            color: white;
-            font-size: 16px;
-            display: flex;
-            gap: 12px;
-            border: none;
-            outline: none;
-            border-bottom: 1px solid white;
-            padding: 16px 0px;
-            cursor: pointer;
-     }
-
 }
+}
+
+.secaoCidade{
+    flex-direction: column;
+
+    .titulo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
+    .cards{
+        margin-top: 52px;
+        display: flex;
+        justify-content: space-between;
+
+        .card{
+            width: 32%;
+            aspect-ratio: 16/9;
+            background-image: url(imagens/card1.webp);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .card:nth-child(2){
+            background-image: url(imagens/card2.webp);
+        }
+
+        .card:nth-child(3){
+            background-image: url(imagens/card3.webp);
+        }
+    }
+}
+
+.secaoDepoimentos{
+    flex-direction: column;
+
+    .logotipos{
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+
+        
+    .depoimentos{
+        margin-top: 62px;
+        display: flex;
+        justify-content: space-between;
+
+        .depoimento{
+            width: 31%;
+        }
+    }
+}
+
+.secaoObrigado{
+    flex-direction: column;
+    align-items: center;
+
+    h2{
+        margin-bottom: 40px;
+    }
+
+    ul{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(imagens/bg-footer.webp);
+
+    .conteudoFooter{
+        display: flex;
+        width: 100%;
+        padding: 7vw;
+
+        .logoFooter{
+            width: 30%;
+
+            h3{
+            font-size: 24px;
+            font-weight: 500;
+            letter-spacing: 4px;
+        }
+
+        h2{
+            font-size: 3.7vw;
+            font-family: "Benguiat";
+        }
+        }
+
+        .secoesFooter{
+            display: flex;
+            flex: 1;
+            justify-content: end;
+            gap: 6%;
+    }
+}
+
 }
