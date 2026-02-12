@@ -36,3 +36,20 @@ gsap.from(".card", {
         scrub: true
     }
 })
+
+// Animação da seção obrigado2
+
+gsap.from(".secaoObrigado2 ul li", {
+    opacity: 0,
+    x: 40,
+    filter: "blur(10px)",
+    stagger: .03,
+    scrollTrigger: {
+        trigger: ".secaoObrigado2 ul",
+        start: "0% 80%",
+        markers: true,
+        end: "100% 50%",
+        scrub: true
+        
+    }
+})
