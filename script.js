@@ -26,12 +26,13 @@ gsap.from("picture:nth-child(1)", {
 
 gsap.from(".card", {
     opacity: 0,
-    duration: 1,
-    y: 30,
-    filter: "blur(20px)",
+    y: 20,
+    filter: "blur(10px)",
     stagger: .3,
     scrollTrigger: {
         trigger: ".cards",
-        start: "0% 70%",
+        start: "0% 80%",
+        end: "100% 70%",
+        scrub: true
     }
 })
