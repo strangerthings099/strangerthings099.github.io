@@ -2,12 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
 }
 
 @font-face {
     font-family: "Benguiat";
     src: url(fontes/Benguiat\ Bold.ttf);
+}
+
+html, body{
+    overflow-x: hidden !important;
 }
 
 body {
@@ -278,6 +281,15 @@ footer{
   }
 }
 
+@keyframes textoInfinito2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-25%);
+    }
+}
+
 @media (min-width: 601px) {
    .secaoObrigado{
         display: none;
@@ -383,6 +395,7 @@ footer{
     }
 
     .secaoObrigado{
+        margin: 40px 0px 60px;
         h2{
             text-align: center;
             overflow: hidden; 
@@ -401,18 +414,60 @@ footer{
         }
     }
 
-    .footer{
+    footer{
+        padding-top: 40px;
         .conteudoFooter{
-            padding: 50px;
+            padding: 4vw;
+            flex-direction: column;
+
+            .logoFooter{
+                width: 100%;
+
+                h2, h3{
+                    text-align: center;
+                }
+                h2{
+                    font-size: 12vw;
+                }
+
+            }
+
+            .secoesFooter{
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: start;
+
+                .social{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    margin: 40px 0 32px;
+                }
+
+                .institucional{
+                    width: 40%;
+                }
+
+                .parceiro{
+                    width: 50%;
+
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .logotiposFooter{
+            margin-top: 40px;
+        }
+
+        .textoInfinito h3{
+            font-size: 20vw;
         }
     }
 }
 
-@keyframes textoInfinito2 {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-25%);
-    }
-}
+
