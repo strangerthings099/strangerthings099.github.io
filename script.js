@@ -47,9 +47,7 @@ gsap.from(".secaoObrigado2 ul li", {
     scrollTrigger: {
         trigger: ".secaoObrigado2 ul",
         start: "0% 80%",
-        markers: true,
         end: "100% 50%",
-        scrub: true
-        
+        scrub: true,        
     }
 })
