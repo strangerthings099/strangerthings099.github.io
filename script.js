@@ -51,3 +51,19 @@ gsap.from(".secaoObrigado2 ul li", {
         scrub: true,        
     }
 })
+
+// Animação da seção footer
+
+gsap.from("footer", {
+    y: "-30%",
+    immediateRender: false,
+    scrollTrigger: {
+        trigger: "footer",
+        scrub: true,
+        invalidateOnRefresh: true,
+        end: "100% 100%"
+    }
+})
+
+// Letras surgindo -> Pre loader
+
