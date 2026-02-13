@@ -5,7 +5,8 @@ ScrollSmoother.create({
     effects: true
 })
 
-// Animação da seção hero
+function animarPagina(){
+    // Animação da seção hero
 
 gsap.from(".hero", {
     opacity: 0,
@@ -65,5 +66,52 @@ gsap.from("footer", {
     }
 })
 
-// Letras surgindo -> Pre loader
+// Letras animadas
 
+const grupoTextoSplit = document.querySelectorAll(".textoSplit")
+
+grupoTextoSplit.forEach((textoUnicoSplit) => {
+    const split = SplitText.create(textoUnicoSplit, {
+        type: "lines, words, chars",
+        mask: "lines"
+    })
+
+    gsap.from(split.chars, {
+        y: 40,
+        opacity: 0,
+        duration: .3,
+        stagger: .03,
+        scrollTrigger: {
+            trigger: textoUnicoSplit,
+        }
+    })
+})
+}
+
+
+
+const tl =gsap.timeline({
+    onComplete(){
+        animarPagina()
+        gsap.to("#preloader", {
+            opacity: 0,
+            onComplete(){
+                gsap.to("#preloader", {
+                    display: "none"
+                })
+            }
+        })
+    }
+})
+
+tl.to("#preloader path", {
+    strokeDashoffset: 0,
+    duration: 2,
+})
+
+tl.to("#preloader path", {
+    strokeDashoffset: 1,
+    duration: .5,
+    fill: "rgba(168, 19, 19)",
+})
+    
